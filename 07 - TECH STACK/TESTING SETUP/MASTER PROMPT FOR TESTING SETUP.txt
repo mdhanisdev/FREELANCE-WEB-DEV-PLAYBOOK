@@ -1,0 +1,228 @@
+=========================================================================
+PRODUCTION TESTING INSTRUCTIONS
+=========================================================================
+Version: 1.0
+
+This folder contains the complete testing standards for this project.
+
+Before writing, modifying, or reviewing any code, ALWAYS read the relevant
+Markdown files inside this Testing folder.
+
+The Markdown files are the single source of truth for all testing-related work.
+
+Never ignore them.
+
+=========================================================================
+PRIMARY RULE
+=========================================================================
+
+Whenever you create, modify, or refactor any feature, determine which types
+of testing are applicable and implement them according to the documentation
+provided in this folder.
+
+Do not ask whether tests should be written.
+
+Assume testing is mandatory unless explicitly instructed otherwise.
+
+=========================================================================
+FOLLOW THE DOCUMENTATION
+=========================================================================
+
+Read the relevant Markdown files before implementation.
+
+Examples:
+
+• Unit Testing
+• Component Testing
+• Integration Testing
+• End-to-End Testing
+• Manual Testing
+• Lighthouse
+• Accessibility Testing
+• Cross-Browser Testing
+• Security Testing
+• Security Best Practices
+
+Use the documented setup, folder structure, naming conventions, configuration,
+and implementation patterns exactly as defined.
+
+=========================================================================
+TESTING REQUIREMENTS
+=========================================================================
+
+Whenever applicable, implement:
+
+✓ Unit Tests
+✓ Component Tests
+✓ Integration Tests
+✓ End-to-End Tests
+
+Tests should cover:
+
+• Success scenarios
+• Failure scenarios
+• Validation errors
+• Edge cases
+• Loading states
+• Error states
+• Empty states
+• User interactions
+
+Do not write only happy-path tests.
+
+=========================================================================
+UNIT TESTING
+=========================================================================
+
+Use the project's documented Vitest configuration.
+
+Test:
+
+• Utility functions
+• Business logic
+• Helper functions
+• Custom hooks (when appropriate)
+
+Keep tests isolated and deterministic.
+
+=========================================================================
+COMPONENT TESTING
+=========================================================================
+
+Use React Testing Library.
+
+Verify:
+
+• Rendering
+• Props
+• User interactions
+• Accessibility
+• State updates
+
+Avoid testing implementation details.
+
+Test behaviour instead of internal implementation.
+
+=========================================================================
+INTEGRATION TESTING
+=========================================================================
+
+Use React Testing Library together with MSW.
+
+Mock external APIs using the documented MSW setup.
+
+Verify complete user flows between components and mocked backend responses.
+
+=========================================================================
+END-TO-END TESTING
+=========================================================================
+
+Use Playwright.
+
+Test complete user journeys.
+
+Examples include:
+
+• Authentication
+• CRUD operations
+• Navigation
+• Forms
+• Dashboard workflows
+• Logout
+
+Simulate real user behaviour.
+
+=========================================================================
+ACCESSIBILITY
+=========================================================================
+
+Follow the Accessibility Testing documentation.
+
+Ensure:
+
+✓ Semantic HTML
+✓ Keyboard navigation
+✓ Labels
+✓ Accessible names
+✓ Proper ARIA usage
+✓ Screen reader compatibility
+
+Run the documented accessibility tests.
+
+=========================================================================
+LIGHTHOUSE
+=========================================================================
+
+Follow the Lighthouse documentation.
+
+Verify:
+
+• Performance
+• Accessibility
+• Best Practices
+• SEO
+
+Optimize issues whenever possible.
+
+=========================================================================
+CROSS-BROWSER TESTING
+=========================================================================
+
+Follow the documented Playwright configuration.
+
+Verify compatibility across:
+
+• Chromium
+• Firefox
+• WebKit (Safari)
+
+Do not assume behaviour is identical across browsers.
+
+=========================================================================
+SECURITY TESTING
+=========================================================================
+
+Follow the Security Testing documentation.
+
+When applicable:
+
+• Run dependency audits
+• Follow Security Best Practices
+• Prevent XSS
+• Validate user input
+• Avoid insecure coding patterns
+
+=========================================================================
+MANUAL TESTING
+=========================================================================
+
+If automated testing cannot verify a feature completely,
+provide a Manual Testing Checklist.
+
+The checklist should contain clear verification steps.
+
+=========================================================================
+BEFORE COMPLETING ANY TASK
+=========================================================================
+
+Verify:
+
+□ Tests compile successfully
+□ Existing tests still pass
+□ New tests pass
+□ No skipped tests without justification
+□ No failing tests
+□ No unnecessary mocks
+□ No duplicated tests
+
+=========================================================================
+FINAL RULE
+=========================================================================
+
+Never consider a feature complete until all applicable testing
+requirements defined in this folder have been satisfied.
+
+If a particular type of testing is not applicable, explicitly state why.
+
+Always follow the Markdown documentation in this Testing folder before
+making testing decisions.
